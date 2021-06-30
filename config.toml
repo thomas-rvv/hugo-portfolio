@@ -1,0 +1,31 @@
+# For at fornuftigt at kunne afvikle et Hugo Site fra et subdir på webserveren
+# skal der sættes tre indstillinger i konfigurationen:
+# baseURL skal på den lokale installation sættet til "http://localhost/subdirname/"
+# Relative URL's skal være aktiveret
+# CanonifyURLs skal være aktiveret
+# Når sites bygges til https://gyldensaa.dk/portfolio/
+# kaldes kommandoen: hugo -b "https://gyldensaa.dk/portfolio"
+#
+# Test de næste tre linier
+baseURL = "http://localhost/portfolio/"
+RelativeURLs=true
+CanonifyURLs=true
+
+languageCode = "en-us"
+title = "Thomas Portfolio"
+# theme = "bootstrap"
+theme = "basic"
+[permalinks]
+  posts = "posts/:year/:month/:slug"
+  year = "posts/:slug"
+  month = "posts/:slug"
+[Taxonomies]
+  year = "year"
+  month = "month"
+  tag = "tags"
+  category = "categories"
+[params]
+  author = "Thomas Christensen"
+  description = "My portfolio site"
+  gh_url = "https://api.github.com/users"
+  gh_user = "gyldensaa"

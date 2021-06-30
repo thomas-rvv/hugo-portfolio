@@ -1,0 +1,81 @@
+.container {
+  margin: 0 auto;
+  width: 80%;
+}
+nav, footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+@import 'navbar';
+
+/*
+Næste to styles er flyttet til _navbar.scss, hvorfra de importeres
+nav {
+  display: flex;
+  flex-direction: column;
+}
+nav > a {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  color: #f00;
+}
+*/
+
+.oss {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.oss article {
+  border:  1px solid #ddd;
+  box-shadow: 3px 3px 3px #ddd;
+  margin: 0.5%;
+  padding: 0.5%;
+  width: 30%;
+}
+a.tag {
+  background-color: #ddd;
+  color:  #333;
+  display: inline-block;
+  padding: 0.1em;
+  font-size: 0.9em;
+  text-decoration: none;
+}
+
+figure {
+  margin: 0;
+}
+
+figure img {
+max-width: 100%;
+height: auto;
+}
+
+figcaption {
+  margin-top: 1em;
+}
+
+img {
+  display: block;
+}
+
+@media only screen and (min-width: 768px){
+  nav {
+    flex-direction: row
+  }
+  .project-container {
+    display: flex;
+    border: 4px solid #ff5555;
+  }
+  .project-container .project-list {
+    width: 20%;
+    background-color: #ccffcc;
+  }
+  .project-container .project {
+    flex: 1;
+    background-color: #ccaacc;
+  }
+}
